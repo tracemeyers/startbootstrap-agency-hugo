@@ -1,0 +1,11 @@
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">{{ .Site.Params.header.leadin }}</div>
+                <div class="intro-heading">{{ .Site.Params.header.heading }}</div>
+                {{ range .Site.Params.header.btn }}
+                <a href="{{ .url }}" class="page-scroll btn btn-xl">{{ .title }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </header>
