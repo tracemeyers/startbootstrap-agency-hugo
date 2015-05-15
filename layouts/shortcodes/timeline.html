@@ -1,0 +1,35 @@
+
+
+<div class="col-lg-12">
+    <ul class="timeline">
+        {{ $section := .Get "section" }}
+        {{ $limit := .Get "limit" }}
+
+        {{ range $i, $event := (where .Page.Site.Pages "Section" $section).Reverse }}
+
+        {{ $.Page.Scratch.Set "addevent" true }}
+        {{ if eq $limit "past" }}
+            {{ $.Page.Scratch.Set "addevent" (le .Date.Unix .Now.Unix) }}
+        {{ else if eq $limit "future" }}
+            {{ $.Page.Scratch.Set "addevent" (ge .Date.Unix .Now.Unix) }}
+        {{ end }}
+
+        {{ if ($.Page.Scratch.Get "addevent") }}
+        <li class="timeline{{ if not (modBool $i 2) }}-inverted{{ end }}">
+        <div class="timeline-image">
+            <img class="img-circle img-responsive" src="{{ .Params.image }}" alt="">
+        </div>
+        <div class="timeline-panel">
+            <div class="timeline-body">
+                <div class="timeline-heading">
+                    <h4>{{ .Description }}</h4>
+                    <h4 class="subheading">{{ .Title }}</h4>
+                </div>
+                {{ .Content }}
+            </div>
+        </div>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</div>
