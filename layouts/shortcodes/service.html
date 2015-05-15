@@ -1,0 +1,10 @@
+<div class="col-md-4">
+    <span class="fa-stack fa-4x">
+        {{ if .Get "icon" }}
+        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+        <i class="fa {{ .Get "icon" }} fa-stack-1x fa-inverse"></i>
+        {{ end }}
+    </span>
+    <h4 class="service-heading">{{ .Get "heading" }}</h4>
+    {{ .Inner }}
+</div>
