@@ -1,0 +1,19 @@
+<div class="col-md-4 col-sm-6 portfolio-item">
+    {{ $id := .Get "title" }}
+    {{ range where (where .Page.Site.Pages "Section" "modal") "Title" $id }}
+    <a href="#{{ $id | urlize }}" class="portfolio-link" data-toggle="modal">
+        <div class="portfolio-hover">
+            <div class="portfolio-hover-content">
+                <i class="fa fa-plus fa-3x"></i>
+            </div>
+        </div>
+        <img src="{{ .Params.image }}" class="img-responsive" alt="">
+    </a>
+    <div class="portfolio-caption">
+        <h4>{{ .Title }}</h4>
+        <p class="text-muted">
+        {{ .Description }}
+        </p>
+    </div>
+    {{ end }}
+</div>
