@@ -11,6 +11,11 @@
     <!-- Header -->
     {{ partial "header.html" . }}
 
+    <!-- Sections -->
+    {{ range where .Site.Pages.ByWeight "Section" "section" }}
+	    {{ partial "section.html" . }}
+    {{ end }}
+
     <!-- Services Section -->
     <section id="services">
         <div class="container">
