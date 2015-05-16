@@ -1,0 +1,8 @@
+                            {{ $ph := .Get "placeholder" }}
+                            {{ $id := .Get "id" }}
+                            {{ $msg := .Get "message" }}
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="{{ $ph }}" id="{{ $id }}" required data-validation-required-message="{{ $msg }}"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+

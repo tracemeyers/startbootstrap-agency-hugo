@@ -1,0 +1,13 @@
+                {{ $name := .Get "name" }}
+                {{ $id := .Get "id" }}
+                {{ $button := .Get "button" }}
+                <form name="{{ $name }}" id="{{ $id }}" novalidate>
+                    <div class="row">
+                        {{ .Inner }}
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-xl">{{ $button }}</button>
+                        </div>
+                    </div>
+                </form>
