@@ -197,10 +197,22 @@ This section displays a form to send a message.  It can be used in the content a
 
 ### Modifying CSS
 
-TODO
+The theme's CSS is built using [less](http://lesscss.org/).  To build the theme's CSS use the following command:
+```
+lessc static/less/agency.less > static/css/agency.css
+``` 
 
 #### Basic color scheme changes
 
-TODO
+Open static/less/variables.less and edit the colors as desired.  For example, to change the theme to be blue instead of yellow and have a darker light gray then add the following:
+```
+@brand-primary: #4c6aa9;
+@brand-danger: #193776;
+@gray-darkest: #222;
+@gray: #777;
+@gray-lighter: #e8e8e8;
+@placeholder-text: #bbbbbb;
+```
+Run lessc as listed before.
 
 
