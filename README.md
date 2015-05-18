@@ -172,7 +172,7 @@ provided then it displays all the pages in the given section.
 
 ##### Team (teammember)
 
-This section displays a series of team members located in the 'people' Hugo
+This section displays a series of team members located in the 'person' Hugo
 section.  It can be used in the content area of a page like so:
 ```
 {{% teammember name="Kay Garland" usesocial="true" %}}
