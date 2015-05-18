@@ -141,7 +141,10 @@ hitecto quo inventore harum ex magni, dicta impedit.
 This section displays a series of portfolio modal buttons, each with their own
 icon, heading and subheading.  It can be used in the content area of a page like so:
 ```
+{{% modallist %}}
 {{% modalbtn title="Round Icons" %}}
+... more modalbtn ..
+{{% /modallist %}}
 ```
 The title must exactly match a page's title in the 'modal' Hugo section (i.e.
 mysite/layouts/modal/).
