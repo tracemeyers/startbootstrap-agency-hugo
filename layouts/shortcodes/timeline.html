@@ -5,7 +5,8 @@
         {{ $section := .Get "section" }}
         {{ $limit := .Get "limit" }}
 
-        {{ range $i, $event := (where .Page.Site.Pages "Section" $section).Reverse }}
+        {{ $.Page.Scratch.Set "invert" false }}
+        {{ range (where .Page.Site.Pages "Section" $section).Reverse }}
 
         {{ $.Page.Scratch.Set "addevent" true }}
         {{ if eq $limit "past" }}
@@ -15,7 +16,9 @@
         {{ end }}
 
         {{ if ($.Page.Scratch.Get "addevent") }}
-        <li class="timeline{{ if not (modBool $i 2) }}-inverted{{ end }}">
+        {{ $invert := $.Page.Scratch.Get "invert" }}
+        <li class="timeline{{ if $invert }}-inverted{{ end }}">
+        {{ $.Page.Scratch.Set "invert" (not $invert) }}
         <div class="timeline-image">
             <img class="img-circle img-responsive" src="{{ .Params.image }}" alt="">
         </div>
