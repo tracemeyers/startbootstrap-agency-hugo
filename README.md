@@ -7,6 +7,20 @@ agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by
 content sections, a responsive portfolio grid with hover effects, full page
 portfolio item modals, a responsive timeline, and a working PHP contact form.
 
+## Quick Start
+
+1. Clone the theme:
+```
+git clone <this repo>
+```
+2. Run the example site (roughly equivalent to the original Agency theme):
+```
+hugo server --bind=<net interface> --watch --baseUrl=<your url>
+```
+3. Browse to the site
+
+Now you should see a site very similar to [Agency Demo](http://ironsummitmedia.github.io/startbootstrap-agency/).  Note that there is some missing content and minor formatting differences.
+
 ## Getting Started
 
 ### Create a Hugo site with the theme
@@ -80,7 +94,7 @@ Add your image to 'mysite/static/img/header-bg.jpg' to replace the theme's.
 Create a Hugo page containing the one page section's content.  Warning, don't confuse a Hugo section with this
 theme's one page section.
 ```
-hugo new section/services.html
+hugo new section/services.md
 ```
 
 Edit the page to configure its parameters:

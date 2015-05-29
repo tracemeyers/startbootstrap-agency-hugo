@@ -1,0 +1,36 @@
+languageCode = "en-us"
+title = "Start Bootstrap"
+
+[Params]
+    lang = "en"
+
+    [Params.header]
+        leadin = "Welcome To Our Studio!"
+        heading = "It's Nice To Meet You"
+        [[Params.header.btn]]
+            url = "#services"
+            title = "Tell me more"
+
+    [Params.footer]
+        copyright = "Copyright © Your Website 2015"
+        [[Params.footer.btn]]
+            url = "#"
+            icon = "fa-twitter"
+
+        [[Params.footer.btn]]
+            url = "#"
+            icon = "fa-facebook"
+
+        [[Params.footer.btn]]
+            url = "#"
+            icon = "fa-linkedin"
+
+        [[Params.footer.link]]
+            url = "#"
+            title = "Privacy Policy"
+
+        [[Params.footer.link]]
+            url = "#"
+            title = "Terms of Use"
+    [Params.modal]
+        close = "Close Project"
